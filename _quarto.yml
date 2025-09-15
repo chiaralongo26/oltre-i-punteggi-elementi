@@ -68,29 +68,48 @@ format:
     #classoption: [paper=6in:9in,pagesize=pdftex,headinclude=on,footinclude=on,10pt]
     include-in-header:
       text: |
-        \KOMAoptions{DIV=12, BCOR=10mm, headings=standardclasses}
-        \usepackage{draftwatermark}
-        \SetWatermarkText{BOZZA}
-        \SetWatermarkScale{1.5} % bigger/smaller watermark
-        \SetWatermarkLightness{0.95} % 0=black, 1=white (default 0.8)
-        \usepackage{datetime}
-        \usepackage{fancyhdr}
-        \pagestyle{fancy}
-        \fancyfoot{} % clear existing footer
-        \fancyfoot[C]{\footnotesize \textit{Questo è un libro in fase di scrittura. Ultimo rendering: \today\ \currenttime}. \\ Per aggiornamenti visita: \url{giorgioarcara.github.io/oip-book}}
-        \renewcommand*{\thepart}{} % to avoid numbers in parts
-        \renewcommand*{\partname}{} % to avoid label "Parte"
-        \renewcommand*{\partformat}{}
-        \usepackage[backend=biber,style=apa]{biblatex}
-        \addbibresource{references.bib}  % path corretto al tuo .bib
-        \usepackage{fvextra}
-        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
-        %\areaset[0.50in]{4.5in}{8in} uncomment for default Koma option according to template
-        %\usepackage{fontspec}
-        %\newfontfamily\headingfont{Alegreya}
-        \usepackage{pdfpages}
-        % Redefine \maketitle to do nothing
-        \renewcommand{\maketitle}{}
+            \KOMAoptions{DIV=12, BCOR=10mm, headings=standardclasses}
+            
+            % watermark
+            \usepackage{draftwatermark}
+            \SetWatermarkText{BOZZA}
+            \SetWatermarkScale{1.5}
+            \SetWatermarkLightness{0.95}
+            
+            % date and time
+            \usepackage{datetime2} % modern replacement
+            %\usepackage{datetime} % old, if you prefer
+            %\DTMcurrenttime instead of \currenttime
+            
+            % bibliography
+            \usepackage[backend=biber,style=apa]{biblatex}
+            \addbibresource{references.bib}
+            
+            % verbatim
+            \usepackage{fvextra}
+            \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+            
+            % headers/footers (KOMA way)
+            \usepackage[automark,headsepline]{scrlayer-scrpage}
+            \clearpairofpagestyles
+            \ihead{} 
+            \chead{} 
+            \ohead{\headmark}
+            \cfoot{\pagemark}
+            \renewcommand*{\chaptermarkformat}{}
+            \renewcommand*{\sectionmark}[1]{}
+            
+            % suppress part/chapter labels
+            \renewcommand*{\thepart}{}
+            \renewcommand*{\partname}{}
+            \renewcommand*{\partformat}{}
+            
+            % PDF tools
+            \usepackage{pdfpages}
+            
+            % disable title page
+            \renewcommand{\maketitle}{}
+
 
     include-before-body:
       text: |
