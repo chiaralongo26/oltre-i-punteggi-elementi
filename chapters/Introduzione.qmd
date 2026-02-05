@@ -48,7 +48,7 @@ _"utilizzare la statistica è come guidare un'automobile, non occorre capire com
 
 Detta da H. Baayen, grandissimo esperto di statistica, questa affermazione faceva sorridere gli studenti, ma era chiara: utilizzare i metodi statistici correttamente non implica necessariamente conoscere tutto ciò che sta al di sotto, ma capire cosa è corretto fare e cosa non è corretto fare. Nel corso degli anni ho però pensato che fosse utile aggiungere una seconda parte che la metafora in un certo senso, già implica.
 
-_"è vero che non serve conoscere come funziona il motore di un'automobile per saperla guidare, ma chi conosce bene come funziona il motore permette di sfruttarne meglio le potenzialità. Questo è ciò che accade per esempio per i piloti di formula 1"_
+_"è vero che non serve conoscere come funziona il motore di un'automobile per saperla guidare, ma conoscere bene come funziona il motore permette di sfruttarne meglio le potenzialità. Questo è ciò che accade per esempio per i piloti di formula 1"_
 
 
 ![**Guidare un auto di F1 **: per essere un pilota professionista occorre conoscere bene come funziona il motore della propria vettura (ma guarda la prossima figura)](../Figures/F1_1_ChatGPT_BN.png){width="40%"}
